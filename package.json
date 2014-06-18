@@ -1,0 +1,12 @@
+{
+  "name": "google-io",
+  "version": "0.0.1",
+  "description": "Google I/O",
+  "private": true,
+  "scripts": {
+    "start": "node init.js"
+  },
+  "dependencies": {
+    "express": "~3.4.8"
+  }
+}
