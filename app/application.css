@@ -34,7 +34,7 @@ table {
     border-spacing: 0;
 }
 
-html, body{
+html, body, .messages-container, .messages{
     height: 100%;
 }
 
@@ -56,4 +56,17 @@ html, body{
     top: 0;
     z-index: 5;
     background: white;
+}
+
+.container textarea{
+    width: 100%;
+    display: block;
+    height: 100%;
+    margin-top: 15px;
+}
+
+.messages-wrapper{
+    height: -webkit-calc(100% - 95px);
+    height: -moz-calc(100% - 95px);
+    height: calc(100% - 95px);
 }
