@@ -33,6 +33,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+html, body{
+    font-family: 'Pontano Sans', sans-serif;
+}
 
 html, body, .messages-container, .messages{
     height: 100%;
@@ -40,15 +43,8 @@ html, body, .messages-container, .messages{
 
 /* Application */
 
-#map{
-    height: 100%;
-    position: relative;
-    z-index: 1;
-}
-
 .container{
-    font-family: 'Pontano Sans', sans-serif;
-    width: 450px;
+    width: 25%;
     height: 100%;
     padding: 10px 20px;
     position: absolute;
