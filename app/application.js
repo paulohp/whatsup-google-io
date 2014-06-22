@@ -57,7 +57,7 @@ app.controller('chatCtrl',
   });
 });  // end of controller
 
-app.directive('googlemaps', function($http) {
+app.directive('googleMaps', function($http) {
   var map,
   marks = [],
   mapOptions = {
