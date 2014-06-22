@@ -1,8 +1,14 @@
-var fs = require('fs');
-var express = require('express');
-var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+'use strict';
+// define globals
+var express = require('express'),
+    io = require('socket.io'),
+    http = require('http'),
+    app = express(),
+    server = http.createServer(app),
+    io = io.listen(server),
+    fs = require('fs');
+
+require('./server/sockets/base')(io);
 
 
 app.use(express.static(__dirname + '/'));
@@ -25,6 +31,6 @@ app.get('/api/gdgs', function(req, res){
     });
 });
 
-app.listen(5000, function(){
+server.listen(5000, function(){
   console.log('Application are running on port 5000');
 });
