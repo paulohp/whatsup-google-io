@@ -42,4 +42,15 @@ html, body{
 
 #map{
     height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.container{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    background: white;
 }
