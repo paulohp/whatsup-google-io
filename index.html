@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Google I/O Extend</title>
 
-    <link rel="stylesheet" href="app/application.css">
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet'  type='text/css'>
+    <link rel="stylesheet" href="app/application.css">
 </head>
 <body>
 
@@ -16,27 +16,20 @@
         You are known as: <span ng-bind="nickName"></span>.
         <br/>
         Change your nickname with <code>/nick [yourNewNick]</code>
-        <div class='row messages-wrapper'>
-          <div class='col-md-9 messages-container'>
-            <textarea ng-disable='true' ng-model='messageLog'></textarea>
-          </div>
+        <div class='messages-wrapper'>
+            <textarea ng-disable='true' ng-model='messageLog' class="form-control" disabled></textarea>
         </div>
         <div class='row'>
           &nbsp;
         </div>
         <div class='row'>
-          <div class='col-md-8'>
             <form role='form' novalidate name='form'>
-              <div class='form-group'>
-                <input type='text' style='width: 80%'
-                required
-                ng-max='50'
-                ng-model='message'
-                focus>
-                <button class='btn btn-sm btn-primary'
-                  ng-enable='form.$valid'
-                  ng-click="sendMessage(message)">Send!</button>
-              </div>
+                <div class='col-md-8'>
+                  <input type='text' required ng-max='50' ng-model='message' focus class="form-control">
+                </div>
+                <div class='col-md-4'>
+                  <button class='btn btn-sm btn-primary btn-block' ng-enable='form.$valid' ng-click="sendMessage(message)">Send!</button>
+                </div>
             </form>
           </div>
         </div>
