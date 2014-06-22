@@ -66,7 +66,7 @@ app.directive('googleMaps', function($http) {
   };
 
   return {
-    restrict: 'AE',
+    restrict: 'E',
     scope: {},
     template: '<div id="map"></div>',
     link: function(scope, iElement, iAttrs) {

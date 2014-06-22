@@ -58,11 +58,13 @@ html, body, .messages-container, .messages{
     background: white;
 }
 
-.container textarea{
+.container textarea[disabled="disabled"]{
     width: 100%;
     display: block;
     height: 100%;
     margin-top: 15px;
+    background-color: #fff;
+    color: #000;
 }
 
 .messages-wrapper{
@@ -70,3 +72,4 @@ html, body, .messages-container, .messages{
     height: -moz-calc(100% - 110px);
     height: calc(100% - 110px);
 }
+
