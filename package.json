@@ -1,8 +1,9 @@
 {
   "name": "google-io",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Google I/O",
   "private": true,
+  "main": "init.js",
   "scripts": {
     "start": "node init.js"
   },
@@ -18,5 +19,9 @@
     "socket.io": "^0.9.16",
     "static-favicon": "~1.0.0",
     "stylus": "0.42.3"
+  },
+  "subdomain": "google-io",
+  "engines": {
+    "node": "0.10.x"
   }
 }
