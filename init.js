@@ -31,6 +31,10 @@ app.get('/api/gdgs', function(req, res){
     });
 });
 
+app.get('*', function(req, res){
+    res.redirect('/');
+});
+
 server.listen(process.env.PORT || 5000, function(){
   console.log('Application are running on port 5000');
 });
