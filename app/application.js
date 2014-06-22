@@ -1,14 +1,11 @@
 'use strict'
 var app = angular.module('googleIO', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'btford.socket-io'
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'btford.socket-io'
   ]);
 
-// app.factory('mySocket', function (socketFactory) {
-//   return socketFactory();
-// });
 app.factory('chatSocket', function (socketFactory) {
   var socket = socketFactory();
   socket.forward('broadcast');
@@ -47,7 +44,6 @@ app.controller('chatCtrl',
     $scope.message = '';
   };
   $scope.$on('socket:broadcast', function(event, data) {
-    console.log(event, data);
     $log.debug('got a message', event.name);
     if (!data.payload) {
       $log.error('invalid message', 'event', event, 'data', JSON.stringify(data));
