@@ -47,6 +47,8 @@ html, body{
 }
 
 .container{
+    font-family: 'Pontano Sans', sans-serif;
+    width: 450px;
     height: 100%;
     padding: 10px 20px;
     position: absolute;
