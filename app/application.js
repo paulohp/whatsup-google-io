@@ -79,16 +79,20 @@ app.directive('googleMaps', function($http) {
           marks.push({
             latLng: new google.maps.LatLng(gdgs.groups[i].geo.lat,gdgs.groups[i].geo.lng),
             map: map,
+            title: gdgs.groups[i].name,
             icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"}
             );
         };
 
         $http.get('/api/google-ios').success(function(googleios) {
 
+          var infoWindow = new google.maps.InfoWindow();
+
           for (var i = 0; i < googleios.events.length; i++) {
             marks.push({
               latLng: new google.maps.LatLng(googleios.events[i].latitude, googleios.events[i].longitude),
               map: map,
+              title: googleios.events[i].event_name,
               icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"}
               );
           }
@@ -100,6 +104,13 @@ app.directive('googleMaps', function($http) {
               title: marks[i].title,
               icon: marks[i].icon
             });
+
+            google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+                return function() {
+                    infoWindow.setContent(marker.title);
+                    infoWindow.open(map, marker);
+                }
+            })(marker, i));
           };
 
         });
