@@ -53,7 +53,7 @@ Esta diretiva em especifico vem para solucionar um problema de timing de load, o
 Sim, você pode sair da caixa tranquilamente do angular e utilizar o que ele tem de melhor em diretivas customizadas, logo isso significa que você mesmo poderá desenvolver suas proprias diretivas atravês de uma API, semelhante ao que você faz com controllers e serviços.
 
 
-Services, Providers e Factories
+# Services, Providers e Factories
 
 Factories
 Factory é o tipo mais comun de serviço usado. É também muito fácil de entender. Uma factory é um serviço que pode retornar qualquer tipo de dado. Não há uma maneira definida de como você pode criar estes dados, você somente precisa retornar algo. Quando trabalho com objetos, eu gosto de trabalhar com o Revealing module pattern, mas você pode usar o que melhor se adaptar.
@@ -81,7 +81,44 @@ Este serviço analisa a URL do navegador com base no window.location e atualiza 
 
 Este simples serviço implementa com segurança mensagens de log para o navegador, quando houver suporte.
 
->
+> $timeout
+
+Invólcro da função window.setTimeout.
+
+> $animate
+
+Este serviço é muito interessante, pois fornece funções para manipulação do DOM, como inserir, remover e/ou mover elementos, bem como adicionar e remover classes css. Este é o serviço utilizado pela diretiva ngAnimate, que fornece ganchos bem interessantes para animação de alto nível com CSS e JAvascript.
+
+# Filters
+
+> filter
+
+Este filtro seleciona uma lista e retorna uma nova matriz de acordo com parametros previamente definidos de filtragem
+
+> number
+
+Formata um texto como numeral
+
+> order
+
+Este filtro é bem legal, pois possibilita ordenar um array de acordo com sua posição na matriz, ou seja, é extremamente essencial quando existe a necessidade de ordenar dados tabulados.
+
+
+# Routing
+
+> ngRoute
+
+Esse módulo habilita o roteamento de URL da sua aplicação, ele suporta atualmente hashbang e HTML5 pushState
+
+> $routeParams
+
+Esse serviço é utilizado quando é necessário resgatar query params na URL
+
+> $route
+
+Esse serviço é utilizado para saber detalhes da rota que está sendo acessada
+
+
 
 # $scope
 
