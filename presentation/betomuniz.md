@@ -148,10 +148,6 @@ Se você fizer isso direito no celular, se você enfrentar os tempos de carregam
 
 Visando desempenho e mais contribuição da comunidade, o core resolveu distribuir o framework em pequenos components, possibilitando assim que modulos como angular ui, angular router, restangular, etc possam ser opções para substituição de modulos anteriormente nativos.
 
-> Simplicidade / Metadata
-
-Simplificar o codigo e padronizar de acordo com especificações é um dos objetivos da proxima versão, para isso serão utilizadas Anotations e o ES6 para "esconder" estruturas relacionadas ao angular e deixar com o programador apenas o trabalho de escrever linhas de código relacionadas ao seu negocio.
-
 > Change Detection
 
 A proposta dessa feature é simular a futura implementação nativa Object.observe(), que por sua vez é uma API de baixo nivel que permite a adição de um ouvinte para notificação quando um objeto JS muda de estado.
@@ -188,5 +184,3 @@ Será um bonus realizado pelos criadores para se definir uma convenção com boa
 > Scaffolding
 
 A equipe irá adotar um sistema padrão de scaffolding e até o momento opta por ngTailor ou Yeoman para gerir o pacote de ferramentas e componentes para desenvolver aplicações
-
-> Build/Deploy.

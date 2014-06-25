@@ -1,5 +1,5 @@
 angular.module('googleioDirectives', [])
-.directive('googleMaps', function($http) {
+.directive('googleMaps', function($http) { //
   var map,
   marks = [],
   mapOptions = {
@@ -8,12 +8,12 @@ angular.module('googleioDirectives', [])
   };
 
   return {
-    restrict: 'E',
-    scope: true,
-    templateUrl: 'app/templates/map.html',
-    link: function($scope, $element, $attrs) {
+    restrict: 'E',                              // Informando que essa diretiva é do tipo Elemento
+    scope: true,                                // Criando escopo isolado da diretiva
+    templateUrl: 'app/templates/map.html',      // Informando onde está o template desta diretiva
+    link: function($scope, $element, $attrs) {  // Linkando diretiva na aplicacao
 
-      $element.find('#controls').css({
+      $element.find('#controls').css({          // Definindo estilos da diretiva e em escopo proprio
         "width": "75%",
         "position": "absolute",
         "z-index": 2,
@@ -29,8 +29,10 @@ angular.module('googleioDirectives', [])
         "z-index": 1,
       });
 
+
       $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
+      // Realizando requisição em uma API
       $http.get('/api/gdgs').success(function(gdgs) {
 
         for (var i = 0; i < gdgs.groups.length; i++) {
