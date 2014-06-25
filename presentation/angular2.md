@@ -39,12 +39,19 @@ O objetivo desta feature será de cobrir necessidades já comprovadas para com o
 
 ### Logging ###
 
+Esta feature abre uma nova camada no que se diz respeito a debug com angular. Possibilitando criar uma stacktrace para os modulos plugaveis do angular.
 
 ### Annotations ###
-### Documentation ###
-### Benchmarking ###
-### Touch/Animations ###
-### Package Repository ###
+
+Esta feature fornece ferramentas para se escrever de forma mais declarativa, possibilitando ao desenvolvedor entender o que está acontecendo
+
 ### Reference App ###
+
+Será um bonus realizado pelos criadores para se definir uma convenção com boas práticas para desenvolvimento. Também servirá para demonstrar uma aplicação de larga escala com angular.
+
+
 ### Scaffolding ###
+
+A equipe irá adotar um sistema padrão de scaffolding e até o momento opta por ngTailor ou Yeoman para gerir o pacote de ferramentas e componentes para desenvolver aplicações
+
 ### Build/Deploy. ###
