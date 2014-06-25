@@ -47,3 +47,50 @@ Essa diretiva simples e direta, atrela o elemento onde ela é referênciada com 
 > ngSrc
 
 Esta diretiva em especifico vem para solucionar um problema de timing de load, onde o browser renderiza e busca os sources e obviamente não vai encontrar a referência do hash nas imagens.
+
+> Custom Directives
+
+Sim, você pode sair da caixa tranquilamente do angular e utilizar o que ele tem de melhor em diretivas customizadas, logo isso significa que você mesmo poderá desenvolver suas proprias diretivas atravês de uma API, semelhante ao que você faz com controllers e serviços.
+
+
+Services, Providers e Factories
+
+Factories
+Factory é o tipo mais comun de serviço usado. É também muito fácil de entender. Uma factory é um serviço que pode retornar qualquer tipo de dado. Não há uma maneira definida de como você pode criar estes dados, você somente precisa retornar algo. Quando trabalho com objetos, eu gosto de trabalhar com o Revealing module pattern, mas você pode usar o que melhor se adaptar.
+
+
+Services
+O tipo de serviços service trabalha muito parecido com a maneira que uma factory trabalha. A diferença é que um service recebe um construtor, então quando você usa ele pela primeira vez, você precisa fazer um new Foo(); para instanciar o objeto. Mantenha em mente que ele irá retornar o mesmo objeto se você usar o serviço novamente em outro lugar.
+
+
+Provider
+Um provider espera uma função $get que será o que nós injetaremos dentro das outras partes da nossa aplicação. Então quando nós injetamos foo dentro de um controller, o que nós injetamos é uma função $get.
+
+Porque nós devemos usar este forma quando uma factory é mais simples? Porque podemos configurar um provider em uma função config.
+
+
+> $http
+
+Este serviço centraliza a comunicação entre servidores e o client via HTTP, utilizando-se do objeto XMLHttpRequest ou atravês de JSONP
+
+> $location
+
+Este serviço analisa a URL do navegador com base no window.location e atualiza a url dentro da sua aplicação, isso é muito util pois geralmente lidamos com Single Page Applications
+
+> $log
+
+Este simples serviço implementa com segurança mensagens de log para o navegador, quando houver suporte.
+
+>
+
+# $scope
+
+Esse é um objeto especial dentro de qualquer aplicação Angular,  e ele é destinado a permitir uma comunicação entre a view e o controller, ou seja, todas as variaveis disponiveis na camada View poderão ser acessadas no controle atravês deste objeto.
+
+# ngResources
+
+O módulo ngResources é interessante, pois através dele podemos consultar APIs REST de forma limpa e padrão.
+
+# ngCookies
+
+Este módulo também é muito interessante, pois auxilia o gerenciamento de cookies de sua aplicação e de uma maneira bem simplificada.
