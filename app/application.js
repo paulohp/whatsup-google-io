@@ -1,6 +1,9 @@
 'use strict'
 var app = angular.module('googleio', [
     'googleioDirectives',
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
     'btford.socket-io'
   ]);
 
